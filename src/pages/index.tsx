@@ -11,8 +11,8 @@ function App() {
   };
 
   return (
-    <div className="container bg-red-700">
-      <h1 onClick={teste}>oi meu chapa chapado</h1>
+    <div className="container flex-1 bg-red-700">
+      <h1 onClick={teste}>oi meu chapa chapa</h1>
       <h2>{name}</h2>
       <Link href="/new/game">
         new game

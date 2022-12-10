@@ -1,15 +1,15 @@
-import Link from "next/link";
+import AppLink from "../shared/appLink";
+import { Routes } from "../../routes/appRoutes";
+import { useRouter } from "next/router";
 
 export function Navbar() {
-  return (
-    <div className="flex flex-col">
-      <Link href="/">
-        <a>Library</a>
-      </Link>
+  const router = useRouter();
 
-      <Link href="/">
-        <a>Library</a>
-      </Link>
+  return (
+    <div className="flex h-full w-[230px] flex-col px-3 py-2">
+      {Routes.map(route =>
+        <AppLink label={route.label} key={route.path} href={route.path} Icon={route.icon} router={router} />
+      )}
     </div>
   );
 }
