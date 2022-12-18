@@ -1,7 +1,7 @@
 import { ChangeEvent, useRef } from "react";
 import SecundaryButton from "../shared/secundaryButton";
 
-type changeProp = {
+export type changeProp = {
   path: string;
   value: Blob;
 }
